@@ -31,3 +31,6 @@ var makeDancer = function(top, left, timeBetweenSteps){
 
   return dancer;
 };
+
+var happyDancer = makeDancer(500, 500, 1000);
+console.log('happyDancer is : ', happyDancer);
