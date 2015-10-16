@@ -29,6 +29,25 @@ $(document).ready(function(){
       Math.random() * 1000
     );
     $('body').append(dancer.$node);
+
+    // window.dancers.push(dancer);
+    //     console.log('I am in here');
+
+    // $(".makeDancersDoStuffButton").on("click", function(event) {
+    //   for (var i = 0; i < window.dancers.length; i++) {
+    //     window.dancers[i].LineUp();
+    //   };
+    // }
+    
+
   });
+
+
+  //   var dancerStuffToDo = new stuffToDo(
+
+      // )
+//  }
+
+
 });
 
