@@ -26,6 +26,11 @@ Dancer.prototype.setPosition = function(top, left) {
   this.$node.css(styleSettings);
 };
 
+Dancer.prototype.lineUp = function(top, left){
+  this.top = 0;
+  this.left = 0;
+};
+
 // var happyDancer = new Dancer(500, 500, 1000);
 // console.log('happyDancer is : ', happyDancer);
 
