@@ -6,7 +6,14 @@ var PsychedelicDancer = function(top, left, timeBetweenSteps){
 PsychedelicDancer.prototype = Object.create(Dancer.prototype);
 PsychedelicDancer.prototype.constructor = PsychedelicDancer;
 
+PsychedelicDancer.prototype.randomColorGenerator = function() {
+    var dancerColorR = Math.floor(Math.random()*255);
+    var dancerColorG = Math.floor(Math.random()*255);
+    var dancerColorB = Math.floor(Math.random()*255);
+    return "rgb(" + dancerColorR + ", " + dancerColorG + ", " + dancerColorB + ")"; 
+  }
 PsychedelicDancer.prototype.step = function(){
+  
   Dancer.prototype.step.call(this);
   this.toggleCount++;
   this.$node.toggle();
@@ -19,14 +26,10 @@ PsychedelicDancer.prototype.step = function(){
   //   this.$node.css(styleSettings);  //consider else?
   // };
   if (this.toggleCount % 5 === 0) { //|| 75 < this.toggleCount < 500) {
-    var dancerColorR = Math.floor(Math.random()*255);
-    var dancerColorG = Math.floor(Math.random()*255);
-    var dancerColorB = Math.floor(Math.random()*255);
-    var randomColor = "rgb(" + dancerColorR + ", " + dancerColorG + ", " + dancerColorB + ")";
     var styleSettings = {
       // border: "10px",
       "border-radius": "10px",
-      "border-color" : randomColor
+      "border-color" : this.randomColorGenerator()
     };
     this.$node.css(styleSettings);  //consider else?
   }

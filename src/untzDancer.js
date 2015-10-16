@@ -27,3 +27,5 @@ UntzDancer.prototype.step = function(){
   }
 };
 
+// var awesomeInstanceofUntz = new UntzDancer (10, 20, 100);
+// console.log('awesomeInstanceofUntz is: ',awesomeInstanceofUntz)
